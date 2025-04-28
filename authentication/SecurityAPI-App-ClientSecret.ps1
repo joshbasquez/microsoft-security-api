@@ -1,3 +1,13 @@
+# Connect to the Defender SecurityAPI using certificate authentication
+
+# pre-requisites:
+<#
+ - app registration (clientID) must have API permissions for defender.
+     example reading machine information will need machine.read.all
+     permissions added in entra > applications > app registrations > "app name" 
+       > API permissions > Add a permission > search "WindowsDefenderATP" > Add machine.read.all or machine.readwrite.all
+#>
+
 # Retrieve Token
 $tenantId = "xxx"
 $clientId = "xxx"
