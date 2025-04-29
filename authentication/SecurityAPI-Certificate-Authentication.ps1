@@ -19,6 +19,17 @@
     get-item -Path 'Cert:\CurrentUser\my\xxthumbprintxxx'
 #>
 
+<# 
+API endpoints URLs - https://learn.microsoft.com/en-us/defender-endpoint/gov
+sign-in
+ Commercial / GCC    - https://login.microsoftonline.com
+ GCCH / DoD          - https://login.microsoftonline.us
+defender for endpoint api
+ GCC             - https://api-gcc.securitycenter.microsoft.us
+ GCCH/DoD        - https://api-gov.securitycenter.microsoft.us 
+#>
+
+
 Import-Module MSAL.PS
 
 $connectionDetails = @{
