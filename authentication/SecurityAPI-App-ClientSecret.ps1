@@ -8,6 +8,16 @@
        > API permissions > Add a permission > search "WindowsDefenderATP" > Add machine.read.all or machine.readwrite.all
 #>
 
+<# 
+API endpoints URLs - https://learn.microsoft.com/en-us/defender-endpoint/gov
+sign-in
+ Commercial / GCC    - https://login.microsoftonline.com
+ GCCH / DoD          - https://login.microsoftonline.us
+defender for endpoint api
+ GCC             - https://api-gcc.securitycenter.microsoft.us
+ GCCH/DoD        - https://api-gov.securitycenter.microsoft.us 
+#>
+
 # Retrieve Token
 $tenantId = "xxx"
 $clientId = "xxx"
