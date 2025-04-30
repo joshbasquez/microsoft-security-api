@@ -1,12 +1,16 @@
-# how to collect all results from a query with over 10K results
-#  aka pagination
-
+#######################################
+# Collect Devices without Pagination ##
+#######################################
+# results capped at 10K
 $devices = Invoke-RestMethod -Uri "https://api.security.microsoft.com/api/machines" -Headers $headers
 $devices.value | ft id, computerdnsname, osplatform
 
 ###############################
 # Add Pagination/Collect All ##
 ###############################
+# results collected for all pages, 
+# combined into $allResults
+
 $working = 1
 $allResults=@()
 $pageCount = 1
@@ -25,4 +29,3 @@ while($working){
     $allResults+=$result.value
 }
 "finished. pagecount: $pageCount . devicecount: $($allResults.count)."
-#############################
